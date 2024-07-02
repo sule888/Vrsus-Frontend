@@ -1,8 +1,97 @@
+/* Paleta de colores */
 :root {
+  --white: white;
+  --black: black;
+  --primary-color: #00ffff;
+  --primary-color-disabled: #c0feff;
+  --primary-color-hover: #00e1e2;
+  --primary-color-pressed: #008c91;
+  --secondary-color: #d842f3;
+  --secondary-color-disabled: #f5cfff;
+  --secondary-color-hover: #a219b2;
+  --secondary-color-pressed: #701877;
+  --secondary-backgound-color: #000032;
+  --primary-background-color: #000000;
+  --support-color: #00ff7f;
+  --gradient-primary-background-color-: linear-gradient(
+    to right,
+    #000038,
+    #2d0134
+  );
+  --gradient-secondary-background-color-: linear-gradient(
+    to right,
+    #02595c,
+    #3d005c
+  );
+  --gradient-support-background-color-: linear-gradient(
+    to right,
+    #009e9e,
+    #2f0036
+  );
+  --gradient-calendar-background-color-: linear-gradient(
+    to right,
+    #00017b,
+    #490055
+  );
+  --gradient-border-card-color: linear-gradient(to right, #ffffff, #701877);
+}
+/* Elementos css */
+:root {
+  /* buttons */
+  --border-radius-button: 50px;
+  --border-width-buttons: 4px;
+  --border-primary-color: var(--primary-color) var(--border-width-buttons) solid;
+  --border-secondary-color: var(--secondary-color) var(--border-width-buttons)
+    solid;
+  --border-support-color: var(--support-color) var(--border-width-buttons) solid;
+  --min-height-buttons: 80px;
+  --min-width-buttons: 200px;
+  --border-radius-buttons-forms: 6px;
+  --border-radius-arrow-buttons: 50%;
+  --text-center-buttons: center;
+  /* cards */
+  --border-radius-cards: 20px;
+  --border-card-secondary: var(--gradient-border-card-color)
+    var(--border-width-buttons) solid;
+  --background-arrow-buttons-cards-proyects: rgba(
+    0,
+    var(--support-background-color),
+    0,
+    0.2
+  );
+  --background-arrow-buttons-cards-proyects: rgba(
+    0,
+    var(--support-background-color),
+    0,
+    0.2
+  );
+  --drop-shadow-pixels: 0px 0px 50px 1px;
 }
 
+/* Fonts */
 :root {
+  --secondary-text-color: var(--primary-color);
+  --support-text-color: linear-gradient(to right, #7076ec, #ce8ade);
+  --titles: 48px;
+  --subtitles: 36px;
+  --coment-text: 12px;
+  --normal-text: 16px;
+  --information-text: 14px;
+  --primary-font: "Alata";
+  --secondary-font: "Lekton";
 }
 
-body {
+* {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+html body {
+  background-color: var(--primary-background-color);
+  display: block;
+  box-sizing: border-box;
+  color: var(--white);
+  line-height: 1.6;
+  font-family: var(--primary-font);
+  /* font */
 }
