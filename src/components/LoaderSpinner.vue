@@ -21,7 +21,7 @@
 }
 
 .spinner1 {
-    background-color: black;
+    background-color: var(--primary-background-color);
     width: 50px;
     height: 50px;
     border-radius: 50px;

@@ -1,9 +1,9 @@
 <template>
-    <div>
-        <BaseNormalButton :class="buttonColor">
-            <slot></slot>
-        </BaseNormalButton>
-    </div>
+
+    <BaseNormalButton :class="buttonColor">
+        <slot></slot>
+    </BaseNormalButton>
+
 </template>
 
 <script setup lang="ts">
@@ -26,11 +26,27 @@ const props = defineProps({
     box-shadow: 0px 0px 20px 1px var(--primary-color);
 }
 
+.primary-color:active {
+    box-shadow: 0 0 20px 3px var(--primary-color);
+}
+
+.primary-color:focus {
+    box-shadow: 0px 0px 30px 4px var(--primary-color)
+}
+
 .secondary-color {
     border: var(--secondary-color) solid var(--border-width-buttons);
 }
 
 .secondary-color:hover {
     box-shadow: 0px 0px 20px 1px var(--secondary-color);
+}
+
+.secondary-color:active {
+    box-shadow: 0 0 20px 3px var(--secondary-color);
+}
+
+.secondary-color:focus {
+    box-shadow: 0px 0px 30px 4px var(--secondary-color)
 }
 </style>

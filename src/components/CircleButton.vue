@@ -25,7 +25,7 @@ const props = defineProps({
 .primary-color:hover {
   background: var(--primary-color);
   box-shadow: 0 0 20px 5px var(--primary-color);
-  color: black;
+  color: var(--primary-background-color);
 }
 
 .primary-color::before {
@@ -72,8 +72,6 @@ button:hover::before {
 
 button::before {
   content: '';
-  display: block;
-  position: absolute;
   top: 7%;
   left: 0%;
   opacity: 0;

@@ -25,16 +25,18 @@ const props = defineProps({
 
 <style scoped>
 .checkbox-wrapper-33 {
-    --s-xsmall: 0.625em;
-    --s-small: 1.2em;
+    --s-xsmall: .625em;
+    --s-small: 2.5em;
     --border-width: 1px;
     --c-primary: #5f11e8;
-    --c-primary-20-percent-opacity: rgb(95 17 232 / 20%);
-    --c-primary-10-percent-opacity: rgb(95 17 232 / 10%);
+    --c-primary-20-percent-opacity: #007777;
+    ;
+    --c-primary-10-percent-opacity: #135050;
     --t-base: 0.4s;
-    --t-fast: 0.2s;
+    --t-fast: .2s;
     --e-in: ease-in;
     --e-out: cubic-bezier(0.11, 0.29, 0.18, 0.98);
+
 }
 
 .checkbox-wrapper-33 .visuallyhidden {
@@ -63,7 +65,7 @@ const props = defineProps({
     display: inline-block;
     display: flex;
     margin-right: calc(var(--s-small) * 0.7);
-    border: var(--border-width) solid var(--primary);
+    border: var(--border-width) solid var(--primary-color);
     position: relative;
     border-radius: 0.1em;
     width: 1.5em;
@@ -71,6 +73,7 @@ const props = defineProps({
     transition: box-shadow var(--t-base) var(--e-out),
         background-color var(--t-base);
     box-shadow: 0 0 0 0 var(--c-primary-10-percent-opacity);
+    cursor: pointer;
 }
 
 .checkbox-wrapper-33 .checkbox__symbol:after {
@@ -97,7 +100,7 @@ const props = defineProps({
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-miterlimit: 10;
-    color: var(--c-primary);
+    color: var(--primary-color);
     display: inline-block;
 }
 
@@ -109,6 +112,8 @@ const props = defineProps({
 
 .checkbox-wrapper-33 .checkbox__textwrapper {
     margin: 0;
+    cursor: pointer;
+
 }
 
 .checkbox-wrapper-33 .checkbox__trigger:checked+.checkbox__symbol:after {
@@ -125,6 +130,7 @@ const props = defineProps({
 
 .checkbox-wrapper-33 .checkbox__trigger:focus+.checkbox__symbol {
     box-shadow: 0 0 0 0.25em var(--c-primary-20-percent-opacity);
+
 }
 
 @-webkit-keyframes ripple-33 {

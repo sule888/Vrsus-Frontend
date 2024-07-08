@@ -1,18 +1,31 @@
 <template>
-  <button class="btn normal-btn">
+  <button class="btn normal-btn" :class="counterButtons">
     <slot></slot>
   </button>
 </template>
 
-<script setup></script>
+<script setup>
+const props = defineProps({
+  counterButtons: {
+    type: String,
+    default: "secondary-color"
+  }
+})
+</script>
 
 <style scoped>
 .normal-btn {
   font-size: var(--normal-buttons-text);
   border-radius: var(--border-radius-normal-button);
-  background-color: transparent;
-  max-width: 200px;
-  cursor: pointer;
-  padding: var(--padding-buttons-normal);
+  padding: var(--padding-normal-buttons);
+}
+
+.primary-color {
+  border: solid var(--border-width-buttons) var(--primary-color);
+}
+
+
+.secondary-color {
+  border: solid var(--border-width-buttons) var(--secondary-color);
 }
 </style>

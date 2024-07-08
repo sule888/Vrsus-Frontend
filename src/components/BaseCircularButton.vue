@@ -19,7 +19,7 @@ const props = defineProps({
     font-size: var(--circular-buttons-text);
     border-radius: var(--border-radius-circular-button);
     padding: 10px 20px;
-    background: transparent;
+    border-radius: var(--border-radius-button);
 }
 
 .primary-color {
@@ -28,5 +28,14 @@ const props = defineProps({
 
 .secondary-color {
     border: solid var(--secondary-color) var(--border-width-buttons)
+}
+
+.primary-color:hover {
+    background-color: var(--primary-color);
+    color: var(--black);
+}
+
+.secondary-color:hover {
+    background-color: var(--secondary-color);
 }
 </style>
