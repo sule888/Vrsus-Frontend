@@ -6,66 +6,58 @@
   --primary-color-disabled: #c0feff;
   --primary-color-hover: #00e1e2;
   --primary-color-pressed: #008c91;
+  --primary-color-check: #007777;
   --secondary-color: #d842f3;
   --secondary-color-disabled: #f5cfff;
   --secondary-color-hover: #a219b2;
-  --secondary-color-pressed: #701877;
   --secondary-backgound-color: #000032;
   --primary-background-color: #000000;
   --support-color: #00ff7f;
-  --gradient-primary-background-color-: linear-gradient(
-    to right,
-    #000038,
-    #2d0134
-  );
-  --gradient-secondary-background-color-: linear-gradient(
-    to right,
-    #02595c,
-    #3d005c
-  );
-  --gradient-support-background-color-: linear-gradient(
-    to right,
-    #009e9e,
-    #2f0036
-  );
-  --gradient-calendar-background-color-: linear-gradient(
-    to right,
-    #00017b,
-    #490055
-  );
+  --gradient-primary-background-color-: linear-gradient(to right,
+      #000038,
+      #2d0134);
+  --gradient-secondary-background-color-: linear-gradient(to right,
+      #02595c,
+      #3d005c);
+  --gradient-support-background-color-: linear-gradient(to right,
+      #009e9e,
+      #2f0036);
+  --gradient-calendar-background-color-: linear-gradient(to right,
+      #00017b,
+      #490055);
   --gradient-border-card-color: linear-gradient(to right, #ffffff, #701877);
 }
+
 /* Elementos css */
 :root {
   /* buttons */
   --border-radius-button: 50px;
   --border-width-buttons: 4px;
   --border-primary-color: var(--primary-color) var(--border-width-buttons) solid;
-  --border-secondary-color: var(--secondary-color) var(--border-width-buttons)
-    solid;
+  --border-secondary-color: var(--secondary-color) var(--border-width-buttons) solid;
   --border-support-color: var(--support-color) var(--border-width-buttons) solid;
   --min-height-buttons: 80px;
   --min-width-buttons: 200px;
+  --border-radius-normal-button: 4px;
   --border-radius-buttons-forms: 6px;
-  --border-radius-arrow-buttons: 50%;
+  --border-radius-arrow-buttons: 50px;
   --text-center-buttons: center;
+  --padding-normal-buttons: 5px;
   /* cards */
   --border-radius-cards: 20px;
-  --border-card-secondary: var(--gradient-border-card-color)
-    var(--border-width-buttons) solid;
-  --background-arrow-buttons-cards-proyects: rgba(
-    0,
-    var(--support-background-color),
-    0,
-    0.2
-  );
-  --background-arrow-buttons-cards-proyects: rgba(
-    0,
-    var(--support-background-color),
-    0,
-    0.2
-  );
+  --border-card-secondary: var(--gradient-border-card-color) var(--border-width-buttons) solid;
+  --background-arrow-buttons-cards-proyects: rgba(0,
+      var(--support-background-color),
+      0,
+      0.2);
+  --background-arrow-buttons-cards-proyects: rgba(0,
+      var(--support-background-color),
+      0,
+      0.2);
   --drop-shadow-pixels: 0px 0px 50px 1px;
+  /* Text area: */
+  --border-radius-textarea: 8px;
+
 }
 
 /* Fonts */
@@ -86,6 +78,7 @@
   margin: 0;
   width: 100%;
 }
+
 html body {
   background-color: var(--primary-background-color);
   display: block;
@@ -94,4 +87,33 @@ html body {
   line-height: 1.6;
   font-family: var(--primary-font);
   /* font */
+}
+
+
+.tooltip-container {
+  position: relative;
+  background: var(--primary-background-color);
+  cursor: pointer;
+  font-size: 17px;
+  padding: 0.7em 1.8em;
+}
+
+.btn {
+
+  color: var(--whithe);
+  cursor: pointer;
+  background: transparent;
+  outline: none;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  width: auto;
+
+}
+
+.img-about-us {
+  height: auto;
+  width: 400px;
+  border-radius: var(--border-radius-cards);
+  box-shadow: 0px 0px 20px 1px var(--primary-color);
 }
