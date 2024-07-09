@@ -27,7 +27,7 @@ const props = defineProps({
 }
 
 .primary-color:active {
-    box-shadow: 0 0 20px 3px var(--primary-color);
+    box-shadow: 0px 0px 20px 1px var(--primary-color);
 }
 
 .primary-color:focus {
@@ -43,7 +43,7 @@ const props = defineProps({
 }
 
 .secondary-color:active {
-    box-shadow: 0 0 20px 3px var(--secondary-color);
+    box-shadow: 0px 0px 20px 1px var(--secondary-color);
 }
 
 .secondary-color:focus {

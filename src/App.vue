@@ -1,6 +1,8 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
 import { ref } from "vue";
+import CardPacks from "@/components/CardPacks.vue"
+import NormalButton from "./components/NormalButton.vue";
 // import ModalMain from "@/components/ModalMain.vue"
 // import CircleButton from "./components/CircleButton.vue";
 // Ejemplo de pase de props para el componente de cards: 
@@ -65,6 +67,81 @@ import { ref } from "vue";
 // };
 
 
+// Ejemplo de uso de componente Card Packs
+// const secondary = {
+//   cardType: 'secondary-color',
+//   title: 'Full',
+//   icons: [
+//     {
+//       src: 'src/assets/img/img-cards/minecraft.png',
+//       alt: 'minecraft'
+//     },
+
+//   ],
+//   description: {
+//     duracion: 5,
+//     unidadesDeTiempo: 'horas',
+//     capacidad: 20,
+//     contenido: [
+//       '2 horas de acceso a tus juegos favoritos y nuevas experiencias',
+//       '4 rebanadas de pizza por persona',
+//       'Botana',
+//       'Bebida',
+//       'Decoracion',
+//       'Pastel',
+//       'Desechables',
+//       'Musica'
+//     ]
+//   },
+//   nota: '',
+//   price: 5700
+// }
+// const support = {
+//   cardType: 'support-color',
+//   title: 'Zero',
+//   icons: [
+//     {
+//       src: 'src/assets/img/img-cards/among-us-verde.png',
+//       alt: 'amongus verde'
+//     },
+//     // {
+//     //   src: 'src/assets/img/img-cards/among-us-rojo.png',
+//     //   alt: 'amongus rojo'
+//     // }
+//   ],
+//   description: {
+//     duracion: 5,
+//     unidadesDeTiempo: 'horas',
+//     capacidad: 20,
+//     contenido: [],
+//     nota: ' El tiempo de juego se cobra por separado.'
+//   },
+//   price: 5700
+// }
+// const primary = {
+//   cardType: 'primary-color',
+//   title: 'Reunion',
+//   icons: [
+//     {
+//       src: 'src/assets/img/img-cards/tetris.png',
+//       alt: 'tetris verde'
+//     },
+//     {
+//       src: 'src/assets/img/img-cards/tetris2.png',
+//       alt: 'tetris rojo'
+//     }
+//   ],
+//   description: {
+//     duracion: 5,
+//     unidadesDeTiempo: 'horas',
+//     capacidad: 20,
+//     contenido: [
+//       '2 horas de acceso a tus juegos favoritos y nuevas experiencias',
+//     ]
+//   },
+//   nota: '',
+//   price: 2900
+// }
 </script>
 
 <template>
