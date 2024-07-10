@@ -1,20 +1,22 @@
 <template>
-  <div>
-    <BaseCircularButton class="button" :class="buttonColor">
-      <slot></slot>
-    </BaseCircularButton>
-  </div>
+  <BaseCircularButton :class="buttonColor">
+    <slot></slot>
+  </BaseCircularButton>
 </template>
 
 <script setup>
-import BaseCircularButton from './BaseCircularButton.vue';
-
+import { defineProps } from 'vue';
 const props = defineProps({
   buttonColor: {
     type: String,
     default: "primary-color"
+  },
+  functionButton: {
+    type: Function,
+    required: true
   }
-})
+});
+
 </script>
 
 <style scoped>
@@ -49,6 +51,9 @@ const props = defineProps({
 
 
 button {
+  display: flex;
+  justify-content: space-between;
+  /* gap: 20px; */
   position: relative;
   overflow: hidden;
   box-shadow: 0 0 0 0 transparent;
