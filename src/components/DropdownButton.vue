@@ -41,7 +41,7 @@ const props = defineProps({
     position: relative;
     display: inline-block;
     width: auto;
-    margin: 0 30px;
+
 }
 
 .dropdown-button {
@@ -64,9 +64,12 @@ const props = defineProps({
     background-color: transparent;
     z-index: 1;
     color: white;
-    border-radius: 4px;
-    margin-top: 5px;
     width: 100%;
+    border-left: solid var(--primary-color) var(--border-width-buttons);
+    border-right: solid var(--primary-color) var(--border-width-buttons);
+    border-bottom: solid var(--primary-color) var(--border-width-buttons);
+    border-radius: 0 0px 20px 20px;
+
 
 }
 
