@@ -1,7 +1,7 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
 import { ref } from "vue";
-import CardPacks from "@/components/CardPacks.vue"
+import Hero from "@/components/Hero.vue"
 import NormalButton from "./components/NormalButton.vue";
 // import ModalMain from "@/components/ModalMain.vue"
 // import CircleButton from "./components/CircleButton.vue";
@@ -154,6 +154,8 @@ import NormalButton from "./components/NormalButton.vue";
         <!-- <CircleButton @click="openModal">Open Modal</CircleButton>
         <ModalMain :isOpen="isModalOpen" :multimedia="multimedia" :titulo="titulo" :texto="texto" @close="closeModal" /> -->
       </div>
+
+      <Hero></Hero>
     </div>
     <div style="margin-top: 200px;"></div>
   </header>
