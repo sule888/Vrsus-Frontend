@@ -8,8 +8,8 @@
         <img src="@/assets/img/img-statics/torre-con-gema-escarlata.png" alt="torre" />
         <div class="blur-div"></div>
         <div class="buttons-part">
-            <CircleButton buttonColor="primary-color">Nuestros Servicios</CircleButton>
-            <DropdownButton :options="productos">
+            <CircleButton buttonColor="primary-color" class="button">Nuestros Servicios</CircleButton>
+            <DropdownButton :options="productos" class="button drop">
                 <p>Nuestros Productos</p>
             </DropdownButton>
         </div>
@@ -62,7 +62,7 @@ const productos = [
 }
 
 img {
-    width: 500px;
+    width: 50%;
     height: auto;
     align-self: center;
 }
@@ -71,5 +71,21 @@ img {
     display: flex;
     justify-content: space-between;
     position: relative;
+    flex-flow: wrap;
+    row-gap: 30px;
+}
+
+.drop {
+    margin: 0 20px;
+}
+
+@media (max-width: 600px) {
+    .title-part p {
+        font-size: var(--subtitles);
+    }
+
+    .drop {
+        margin: 0;
+    }
 }
 </style>
