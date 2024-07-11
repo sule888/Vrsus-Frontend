@@ -47,6 +47,10 @@ const burgerSpans = Array(3).fill(null);
     z-index: 1;
 }
 
+.logo-part {
+    width: 100%;
+}
+
 .logo-part img {
     width: 150px;
     height: auto;
