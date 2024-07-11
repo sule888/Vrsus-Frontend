@@ -43,11 +43,6 @@ const productos = [
     font-size: var(--titles);
 }
 
-.gradient-color {
-    background: linear-gradient(to left, #7076ec, #ce8ade);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
 
 .blur-div {
     top: 230px;

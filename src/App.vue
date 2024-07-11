@@ -3,7 +3,7 @@ import { RouterLink, RouterView } from "vue-router";
 import { ref } from "vue";
 import Navbar from "@/components/Navbar.vue"
 import Hero from "@/components/Hero.vue"
-import NormalButton from "./components/NormalButton.vue";
+import AboutUs from "./components/AboutUs.vue";
 // import ModalMain from "@/components/ModalMain.vue"
 // import CircleButton from "./components/CircleButton.vue";
 // Ejemplo de pase de props para el componente de cards: 
@@ -147,7 +147,7 @@ import NormalButton from "./components/NormalButton.vue";
 
 <template>
 
-  <header>
+  <header style="margin: 0 5%;">
 
     <div class="wrapper">
 
@@ -156,8 +156,8 @@ import NormalButton from "./components/NormalButton.vue";
     </div>
     <Navbar></Navbar>
     <Hero></Hero>
-
-    <div style="margin-top: 200px;"></div>
+    <AboutUs></AboutUs>
+    <div style="margin-top: 500px;"></div>
   </header>
 
   <RouterView />
