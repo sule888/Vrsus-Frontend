@@ -20,6 +20,10 @@ const props = defineProps({
     border-radius: var(--border-radius-circular-button);
     padding: 10px 20px;
     border-radius: var(--border-radius-button);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .primary-color {

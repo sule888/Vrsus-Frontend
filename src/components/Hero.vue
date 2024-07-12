@@ -1,7 +1,7 @@
 <template>
-    <div class="cont-hero">
-        <div class="title-part">
-            <p class="gradient-color">Bienvenidos a Vrsus</p>
+    <div class="cont-hero margin-between-components">
+        <div class="title-part subtitles">
+            <p class="gradient-color title">Bienvenidos a Vrsus</p>
             <p>Innovación en Realidad Virtual y Tecnología</p>
         </div>
 
@@ -39,11 +39,6 @@ const productos = [
     gap: 50px;
 }
 
-.title-part p {
-    font-size: var(--titles);
-}
-
-
 .blur-div {
     top: 230px;
     position: absolute;
@@ -75,10 +70,6 @@ img {
 }
 
 @media (max-width: 600px) {
-    .title-part p {
-        font-size: var(--subtitles);
-    }
-
     .drop {
         margin: 0;
     }

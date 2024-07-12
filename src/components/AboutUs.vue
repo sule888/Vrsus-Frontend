@@ -1,6 +1,8 @@
 <template>
-    <div style="display: flex; flex-direction: column; align-items: center;">
-        <div class="title">En VRsus,<p class="gradient-color">estamos redefiniendo la experiencia de la realidad virtual
+    <div class="margin-between-components main-cont">
+        <div class="part-title subtitles">En VRsus,<p class="gradient-color">estamos redefiniendo la experiencia de la
+                realidad
+                virtual
             </p> y llevando la
             tecnología al siguiente nivel
         </div>
@@ -12,12 +14,18 @@
 
             <div v-if="selectedImage !== null" class="overlay" @touchstart="startTouch" @touchmove="moveTouch"
                 @click="closeImage">
-                <CarrouselButtons @click.stop="prevImage" class="carrousel-btn"></CarrouselButtons>
+                <CarrouselButtons @click.stop="prevImage" class="carrousel-btn">
+                    <font-awesome-icon icon="chevron-down" :class="{ open: isDropdownOpen }"
+                        style=" transform: rotate(90deg);" />
+                </CarrouselButtons>
                 <div class="carrousel-multemedy-part"><img :src="multimedy[selectedImage].src"
                         :alt="multimedy[selectedImage].alt" class="full-image" @click.stop />
                     <p>{{ multimedy[selectedImage].alt }}</p>
                 </div>
-                <CarrouselButtons @click.stop="nextImage" class="carrousel-btn"> </CarrouselButtons>
+                <CarrouselButtons @click.stop="nextImage" class="carrousel-btn">
+                    <font-awesome-icon icon="chevron-down" :class="{ open: isDropdownOpen }"
+                        style=" transform: rotate(-90deg);" />
+                </CarrouselButtons>
 
             </div>
         </div>
@@ -95,9 +103,14 @@ const moveTouch = (e) => {
 
 
 <style scoped>
-.title {
-    font-size: var(--subtitles);
-    margin: 100px 0;
+.main-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+}
+
+.part-title {
     text-align: center;
 }
 
@@ -153,6 +166,7 @@ const moveTouch = (e) => {
     align-items: center;
     z-index: 2;
     flex-direction: row;
+    gap: 20px;
     padding: 10px;
     box-sizing: border-box;
 }

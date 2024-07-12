@@ -4,8 +4,11 @@ import { ref } from "vue";
 import Navbar from "@/components/Navbar.vue"
 import Hero from "@/components/Hero.vue"
 import AboutUs from "./components/AboutUs.vue";
+import VrsusProyects from "@/components/VrsusProyects.vue"
 // import ModalMain from "@/components/ModalMain.vue"
 // import CircleButton from "./components/CircleButton.vue";
+
+
 // Ejemplo de pase de props para el componente de cards: 
 // const gameCard = {
 //   cardType: 'vr-aplications',
@@ -147,21 +150,32 @@ import AboutUs from "./components/AboutUs.vue";
 
 <template>
 
-  <header style="margin: 0 5%;">
-
+  <body>
     <div class="wrapper">
 
       <!-- <CircleButton @click="openModal">Open Modal</CircleButton>
-        <ModalMain :isOpen="isModalOpen" :multimedia="multimedia" :titulo="titulo" :texto="texto" @close="closeModal" /> -->
+<ModalMain :isOpen="isModalOpen" :multimedia="multimedia" :titulo="titulo" :texto="texto" @close="closeModal" /> -->
     </div>
-    <Navbar></Navbar>
-    <Hero></Hero>
-    <AboutUs></AboutUs>
-    <div style="margin-top: 500px;"></div>
-  </header>
 
-  <RouterView />
+    <div style="margin: 0 5%;">
+
+      <Navbar></Navbar>
+      <Hero></Hero>
+      <AboutUs></AboutUs>
+
+
+    </div>
+    <VrsusProyects></VrsusProyects>
+    <div style="margin-top: 500px;"></div>
+    <RouterView />
+  </body>
+
 
 
 </template>
-<style scoped></style>
+<style scoped>
+body {
+  display: flex;
+  flex-direction: column;
+}
+</style>
