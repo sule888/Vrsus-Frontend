@@ -1,5 +1,5 @@
 <template>
-    <div class="cont-nav">
+    <div class="cont-nav margin-between-components">
         <div class="logo-part">
             <img src="@/assets/img/logos/LOGO_FINAL_VRSUS5_para_NEON.png" alt="Vrsus logo">
         </div>
