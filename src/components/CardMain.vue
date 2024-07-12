@@ -7,14 +7,15 @@
                     {{ card.title }}
                 </div>
                 <div class="multimedy-part" v-if="card.multimedy.length > 0">
-                    <img v-for="(image, index) in card.multimedy" :key="index" :src="image.src" :alt="image.alt" />
+                    <img v-for="(item, index) in card.multimedy" :key="index"
+                        :src="item.poster ? item.poster : item.src" :alt="item.alt" @click="openModal(card)" />
                 </div>
                 <div v-if="card.text" class="text-part">
                     {{ card.text }}
                 </div>
                 <div class="action-buttons-part" v-if="card.actionButtons.length > 0">
                     <CircleButton v-for="(button, index) in card.actionButtons" :key="index"
-                        :buttonColor="button.buttonType" :to="button.action">
+                        :buttonColor="button.buttonType" @click="handleButtonClick(button.action, card)">
                         {{ button.buttonTitle }}
                     </CircleButton>
                 </div>
@@ -30,15 +31,42 @@
 </template>
 
 <script setup>
-import { defineProps } from 'vue'
+import { defineProps, defineEmits } from 'vue';
+import { useRouter } from 'vue-router';
 
 const props = defineProps({
     configurationCards: {
         type: Array,
         default: () => ([])
+    },
+    cardAction: {
+        type: Function,
+        required: true
     }
-})
+});
+
+const emit = defineEmits(['open-modal']);
+
+const router = useRouter();
+
+const handleButtonClick = (action, card) => {
+    if (action === 'details') {
+        props.cardAction(card);
+    } else if (action === 'contact') {
+        router.push('/contact');
+    }
+};
+
+const openModal = (card) => {
+    emit('open-modal', card);
+};
 </script>
+
+<style scoped>
+/* Estilos aquí */
+</style>
+
+
 
 <style scoped>
 .cont-card {
