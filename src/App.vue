@@ -6,6 +6,7 @@ import Hero from "@/components/Hero.vue"
 import AboutUs from "./components/AboutUs.vue";
 import VrsusProyects from "@/components/VrsusProyects.vue"
 import VrAplications from "@/components/VrAplications.vue";
+import Ubicaciones from "@/components/Ubicaciones.vue"
 // import ModalMain from "@/components/ModalMain.vue"
 // import CircleButton from "./components/CircleButton.vue";
 
@@ -153,25 +154,17 @@ import VrAplications from "@/components/VrAplications.vue";
 
   <body>
     <div class="wrapper">
-
-      <!-- <CircleButton @click="openModal">Open Modal</CircleButton>
-<ModalMain :isOpen="isModalOpen" :multimedia="multimedia" :titulo="titulo" :texto="texto" @close="closeModal" /> -->
     </div>
-
     <div style="margin: 0 5%;">
-
       <Navbar></Navbar>
       <Hero></Hero>
       <AboutUs></AboutUs>
-
-
     </div>
     <VrsusProyects></VrsusProyects>
-
     <div style="margin: 0 5%;">
       <VrAplications></VrAplications>
     </div>
-
+    <Ubicaciones></Ubicaciones>
     <div style="margin-top: 500px;"></div>
     <RouterView />
   </body>

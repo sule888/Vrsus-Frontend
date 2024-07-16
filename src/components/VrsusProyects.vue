@@ -1,6 +1,6 @@
 <template>
     <div class="background">
-        <div class="main-cont">
+        <div class="main-cont-special-backgrounds">
             <div class="title">
                 <p class="title">Proyectos Vrsus</p>
             </div>
@@ -321,13 +321,6 @@ const closeModal = () => {
 .background {
     background: linear-gradient(to right, #000038, #2d0134);
     width: auto;
-}
-
-.main-cont {
-    margin: 50px 5%;
-    display: flex;
-    flex-direction: column;
-    row-gap: 50px;
 }
 
 .carrousel {
