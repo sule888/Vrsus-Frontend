@@ -13,16 +13,16 @@
   --secondary-backgound-color: #000032;
   --primary-background-color: #000000;
   --support-color: #00ff7f;
-  --gradient-primary-background-color-: linear-gradient(to right,
+  --gradient-primary-background-color: linear-gradient(to right,
       #000038,
       #2d0134);
-  --gradient-secondary-background-color-: linear-gradient(to right,
+  --gradient-secondary-background-color: linear-gradient(to right,
       #02595c,
       #3d005c);
-  --gradient-support-background-color-: linear-gradient(to right,
+  --gradient-support-background-color: linear-gradient(to right,
       #009e9e,
       #2f0036);
-  --gradient-calendar-background-color-: linear-gradient(to right,
+  --gradient-calendar-background-color: linear-gradient(to right,
       #00017b,
       #490055);
   --gradient-border-card-color: linear-gradient(to right, #ffffff, #701877);
@@ -64,8 +64,11 @@
 :root {
   --secondary-text-color: var(--primary-color);
   --support-text-color: linear-gradient(to right, #7076ec, #ce8ade);
-  --titles: 48px;
-  --subtitles: 36px;
+  --titles: 40px;
+  --mobile-titles: 35px;
+  --subtitles: 35px;
+  --mobile-subtitles: 30px;
+  --subtitles-extra: 25px;
   --coment-text: 12px;
   --normal-text: 16px;
   --information-text: 14px;
@@ -76,7 +79,6 @@
 * {
   padding: 0;
   margin: 0;
-  width: 100%;
 }
 
 html body {
@@ -115,5 +117,37 @@ html body {
   height: auto;
   width: 400px;
   border-radius: var(--border-radius-cards);
-  box-shadow: 0px 0px 20px 1px var(--primary-color);
+
+}
+
+.gradient-color {
+  background: linear-gradient(to left, #7076ec, #ce8ade);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.margin-between-components {
+  margin-bottom: 100px;
+}
+
+.title {
+  font-size: var(--titles);
+}
+
+.subtitles {
+  font-size: var(--subtitles);
+}
+
+.subtitles-extra {
+  font-size: var(--subtitles-extra);
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: var(--mobile-titles);
+  }
+
+  .subtitles {
+    font-size: var(--mobile-subtitles);
+  }
 }

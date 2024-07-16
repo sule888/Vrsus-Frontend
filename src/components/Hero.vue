@@ -1,15 +1,15 @@
 <template>
-    <div class="cont-hero">
-        <div class="title-part">
-            <p class="gradient-color">Bienvenidos a Vrsus</p>
+    <div class="cont-hero margin-between-components">
+        <div class="title-part subtitles">
+            <p class="gradient-color title">Bienvenidos a Vrsus</p>
             <p>Innovación en Realidad Virtual y Tecnología</p>
         </div>
 
         <img src="@/assets/img/img-statics/torre-con-gema-escarlata.png" alt="torre" />
         <div class="blur-div"></div>
         <div class="buttons-part">
-            <CircleButton buttonColor="primary-color">Nuestros Servicios</CircleButton>
-            <DropdownButton :options="productos">
+            <CircleButton buttonColor="primary-color" class="button">Nuestros Servicios</CircleButton>
+            <DropdownButton :options="productos" class="button drop">
                 <p>Nuestros Productos</p>
             </DropdownButton>
         </div>
@@ -39,16 +39,6 @@ const productos = [
     gap: 50px;
 }
 
-.title-part p {
-    font-size: var(--titles);
-}
-
-.gradient-color {
-    background: linear-gradient(to left, #7076ec, #ce8ade);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
 .blur-div {
     top: 230px;
     position: absolute;
@@ -62,7 +52,7 @@ const productos = [
 }
 
 img {
-    width: 500px;
+    width: 50%;
     height: auto;
     align-self: center;
 }
@@ -71,5 +61,17 @@ img {
     display: flex;
     justify-content: space-between;
     position: relative;
+    flex-flow: wrap;
+    row-gap: 30px;
+}
+
+.drop {
+    margin: 0 20px;
+}
+
+@media (max-width: 600px) {
+    .drop {
+        margin: 0;
+    }
 }
 </style>

@@ -1,10 +1,15 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
 import { ref } from "vue";
+import Navbar from "@/components/Navbar.vue"
 import Hero from "@/components/Hero.vue"
-import NormalButton from "./components/NormalButton.vue";
+import AboutUs from "./components/AboutUs.vue";
+import VrsusProyects from "@/components/VrsusProyects.vue"
+import VrAplications from "@/components/VrAplications.vue";
 // import ModalMain from "@/components/ModalMain.vue"
 // import CircleButton from "./components/CircleButton.vue";
+
+
 // Ejemplo de pase de props para el componente de cards: 
 // const gameCard = {
 //   cardType: 'vr-aplications',
@@ -146,22 +151,37 @@ import NormalButton from "./components/NormalButton.vue";
 
 <template>
 
-  <header>
-
+  <body>
     <div class="wrapper">
-      <div style="margin-top: 200px;"></div>
-      <div style="margin-left: 200px">
-        <!-- <CircleButton @click="openModal">Open Modal</CircleButton>
-        <ModalMain :isOpen="isModalOpen" :multimedia="multimedia" :titulo="titulo" :texto="texto" @close="closeModal" /> -->
-      </div>
 
-      <Hero></Hero>
+      <!-- <CircleButton @click="openModal">Open Modal</CircleButton>
+<ModalMain :isOpen="isModalOpen" :multimedia="multimedia" :titulo="titulo" :texto="texto" @close="closeModal" /> -->
     </div>
-    <div style="margin-top: 200px;"></div>
-  </header>
 
-  <RouterView />
+    <div style="margin: 0 5%;">
+
+      <Navbar></Navbar>
+      <Hero></Hero>
+      <AboutUs></AboutUs>
+
+
+    </div>
+    <VrsusProyects></VrsusProyects>
+
+    <div style="margin: 0 5%;">
+      <VrAplications></VrAplications>
+    </div>
+
+    <div style="margin-top: 500px;"></div>
+    <RouterView />
+  </body>
+
 
 
 </template>
-<style scoped></style>
+<style scoped>
+body {
+  display: flex;
+  flex-direction: column;
+}
+</style>

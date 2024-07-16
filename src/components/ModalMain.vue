@@ -4,13 +4,11 @@
             <div class="modal-content" @click.stop>
                 <button class="close-button" @click="closeModal">&times;</button>
                 <h1>{{ titulo }}</h1>
-
                 <div v-if="multimedia.length" class="multimedia-container">
                     <div v-for="(item, index) in multimedia" :key="index">
-                        <!-- <img v-if="item.type === 'image'" :src="item.src" :alt="item.alt" /> -->
+                        <img v-if="item.type === 'image'" :src="item.src" :alt="item.alt" />
                         <video v-if="item.type === 'video'" controls>
                             <source :src="item.src" :type="item.mimeType" />
-
                         </video>
                     </div>
                 </div>
@@ -49,7 +47,6 @@ export default {
     }
 };
 </script>
-
 <style scoped>
 h1 {
     color: var(--primary-color);

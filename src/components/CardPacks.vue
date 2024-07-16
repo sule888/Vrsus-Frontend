@@ -1,7 +1,7 @@
 <template>
     <div class="card" :class="cardSettings.cardType">
         <div style="">
-            <div class="title-part">
+            <div class="title-part subtitles">
                 Paquete Vrsus {{ cardSettings.title }}
             </div>
             <div class="description-part">
@@ -70,7 +70,6 @@ const props = defineProps({
 }
 
 .title-part {
-    font-size: var(--subtitles);
     margin-bottom: 20px;
 }
 

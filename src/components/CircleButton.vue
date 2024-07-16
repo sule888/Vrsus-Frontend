@@ -53,7 +53,6 @@ const props = defineProps({
 button {
   display: flex;
   justify-content: space-between;
-  /* gap: 20px; */
   position: relative;
   overflow: hidden;
   box-shadow: 0 0 0 0 transparent;
