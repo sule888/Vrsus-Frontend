@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar.vue"
 import Hero from "@/components/Hero.vue"
 import AboutUs from "./components/AboutUs.vue";
 import VrsusProyects from "@/components/VrsusProyects.vue"
+import VrAplications from "@/components/VrAplications.vue";
 // import ModalMain from "@/components/ModalMain.vue"
 // import CircleButton from "./components/CircleButton.vue";
 
@@ -166,6 +167,11 @@ import VrsusProyects from "@/components/VrsusProyects.vue"
 
     </div>
     <VrsusProyects></VrsusProyects>
+
+    <div style="margin: 0 5%;">
+      <VrAplications></VrAplications>
+    </div>
+
     <div style="margin-top: 500px;"></div>
     <RouterView />
   </body>
