@@ -151,3 +151,10 @@ html body {
     font-size: var(--mobile-subtitles);
   }
 }
+
+.main-cont-special-backgrounds {
+  margin: 50px 5%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+}
