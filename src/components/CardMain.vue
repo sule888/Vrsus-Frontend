@@ -1,5 +1,6 @@
 <template>
-    <div class="card-container">
+    <div
+        :class="configurationCards.some(card => card.cardType === 'vr-aplications') ? 'vr-aplications-container' : 'card-container'">
         <div v-for="(card, index) in configurationCards" :key="index"
             :class="['cont-card-wrapper', card.cardType + '-wrapper']">
             <div class="cont-card" :class="card.cardType">
@@ -15,7 +16,7 @@
                 </div>
                 <div class="action-buttons-part" v-if="card.actionButtons.length > 0">
                     <CircleButton v-for="(button, index) in card.actionButtons" :key="index"
-                        :buttonColor="button.buttonType" @click="handleButtonClick(button.action, card)">
+                        :buttonColor="button.buttonType" @click="() => handleButtonClick(button.action, card)">
                         {{ button.buttonTitle }}
                     </CircleButton>
                 </div>
@@ -31,7 +32,7 @@
 </template>
 
 <script setup>
-import { defineProps, defineEmits } from 'vue';
+import { defineProps } from 'vue';
 import { useRouter } from 'vue-router';
 
 const props = defineProps({
@@ -50,6 +51,7 @@ const emit = defineEmits(['open-modal']);
 const router = useRouter();
 
 const handleButtonClick = (action, card) => {
+    props.cardAction(action, card);
     if (action === 'details') {
         props.cardAction(card);
     } else if (action === 'contact') {
@@ -61,12 +63,6 @@ const openModal = (card) => {
     emit('open-modal', card);
 };
 </script>
-
-<style scoped>
-/* Estilos aquí */
-</style>
-
-
 
 <style scoped>
 .cont-card {
@@ -137,26 +133,27 @@ const openModal = (card) => {
 }
 
 .vr-aplications {
-    position: relative;
-    max-width: 600px;
+    max-width: 800px;
     padding: 20px;
-    border-radius: var(--border-radius-cards);
-    box-sizing: border-box;
-    background: var(--primary-background-color);
-    background-clip: padding-box;
-    border: solid var(--border-width-buttons) transparent;
+    border: solid white 4px;
     border-radius: var(--border-radius-cards);
 }
 
 .vr-aplications .action-buttons-part {
     display: flex;
     justify-content: space-between;
+    gap: 20px;
 }
 
+.vr-aplications-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    justify-content: space-between;
+    gap: 50px;
+}
 
 .card-container {
     display: flex;
-    flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
 }
