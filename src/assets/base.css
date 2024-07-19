@@ -142,6 +142,10 @@ html body {
   font-size: var(--subtitles-extra);
 }
 
+.coments {
+  font-size: var(--coment-text);
+}
+
 @media (max-width: 600px) {
   .title {
     font-size: var(--mobile-titles);
