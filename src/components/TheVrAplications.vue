@@ -118,7 +118,6 @@ const cards = ref([
         icons: [],
         masInformacion: "Más información sobre Aplicacion 2."
     },
-    // Añade más tarjetas según sea necesario
 ]);
 
 const moreInfoContainer = ref(null);
@@ -142,9 +141,9 @@ const handleCardAction = (action, card) => {
 
 <style scoped>
 .cont-more-information {
-    margin-top: 2rem;
+    margin: 2rem 0;
     padding: 1rem;
-    border: 2px solid #ccc;
+    border: 2px solid var(--white);
     transition: all 1s ease;
     max-height: 0;
     overflow: hidden;

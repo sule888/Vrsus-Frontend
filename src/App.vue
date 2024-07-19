@@ -1,12 +1,13 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
 import { ref } from "vue";
-import Navbar from "@/components/Navbar.vue"
-import Hero from "@/components/Hero.vue"
-import AboutUs from "./components/AboutUs.vue";
-import VrsusProyects from "@/components/VrsusProyects.vue"
-import VrAplications from "@/components/VrAplications.vue";
-import Ubicaciones from "@/components/Ubicaciones.vue"
+import TheNavbar from "@/components/TheNavbar.vue"
+import TheHero from "@/components/TheHero.vue"
+import TheAboutUs from "./components/TheAboutUs.vue";
+import TheVrsusProyects from "@/components/TheVrsusProyects.vue"
+import TheVrAplications from "@/components/TheVrAplications.vue";
+import TheUbications from "@/components/TheUbications.vue"
+import TheReviews from "@/components/TheReviews.vue"
 // import ModalMain from "@/components/ModalMain.vue"
 // import CircleButton from "./components/CircleButton.vue";
 
@@ -155,26 +156,31 @@ import Ubicaciones from "@/components/Ubicaciones.vue"
   <body>
     <div class="wrapper">
     </div>
-    <div style="margin: 0 5%;">
-      <Navbar></Navbar>
-      <Hero></Hero>
-      <AboutUs></AboutUs>
+    <div class="sections-whit-margin">
+      <TheNavbar />
+      <TheHero />
+      <TheAboutUs />
     </div>
-    <VrsusProyects></VrsusProyects>
-    <div style="margin: 0 5%;">
-      <VrAplications></VrAplications>
+    <TheVrsusProyects />
+    <div class="sections-whit-margin">
+      <TheVrAplications />
     </div>
-    <Ubicaciones></Ubicaciones>
-    <div style="margin-top: 500px;"></div>
+    <TheUbications />
+    <div class="sections-whit-margin">
+      <TheReviews />
+    </div>
     <RouterView />
   </body>
-
-
 
 </template>
 <style scoped>
 body {
   display: flex;
   flex-direction: column;
+  margin-bottom: 500px;
+}
+
+.sections-whit-margin {
+  margin: 0 5%
 }
 </style>

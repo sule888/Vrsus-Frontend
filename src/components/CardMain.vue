@@ -1,8 +1,7 @@
 <template>
     <div
         :class="configurationCards.some(card => card.cardType === 'vr-aplications') ? 'vr-aplications-container' : 'card-container'">
-        <div v-for="(card, index) in configurationCards" :key="index"
-            :class="['cont-card-wrapper', card.cardType + '-wrapper']">
+        <div v-for="(card, index) in configurationCards" :key="index">
             <div class="cont-card" :class="card.cardType">
                 <div v-if="card.title" class="title-part subtitles">
                     {{ card.title }}
@@ -16,7 +15,7 @@
                 </div>
                 <div class="action-buttons-part" v-if="card.actionButtons.length > 0">
                     <CircleButton v-for="(button, index) in card.actionButtons" :key="index"
-                        :buttonColor="button.buttonType" @click="() => handleButtonClick(button.action, card)">
+                        :buttonColor="button.buttonType" @click="actionButton(button.action, card)">
                         {{ button.buttonTitle }}
                     </CircleButton>
                 </div>
@@ -50,7 +49,7 @@ const emit = defineEmits(['open-modal']);
 
 const router = useRouter();
 
-const handleButtonClick = (action, card) => {
+const actionButton = (action, card) => {
     props.cardAction(action, card);
     if (action === 'details') {
         props.cardAction(card);
