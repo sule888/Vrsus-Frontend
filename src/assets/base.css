@@ -146,6 +146,10 @@ html body {
   font-size: var(--coment-text);
 }
 
+.normal-text {
+  --normal-text: 16px;
+}
+
 @media (max-width: 600px) {
   .title {
     font-size: var(--mobile-titles);

@@ -8,6 +8,7 @@ import TheVrsusProyects from "@/components/TheVrsusProyects.vue"
 import TheVrAplications from "@/components/TheVrAplications.vue";
 import TheUbications from "@/components/TheUbications.vue"
 import TheReviews from "@/components/TheReviews.vue"
+import TheFooter from '@/components/TheFooter.vue'
 // import ModalMain from "@/components/ModalMain.vue"
 // import CircleButton from "./components/CircleButton.vue";
 
@@ -169,7 +170,9 @@ import TheReviews from "@/components/TheReviews.vue"
     <div class="sections-whit-margin">
       <TheReviews />
     </div>
+    <TheFooter />
     <RouterView />
+
   </body>
 
 </template>
@@ -177,7 +180,6 @@ import TheReviews from "@/components/TheReviews.vue"
 body {
   display: flex;
   flex-direction: column;
-  margin-bottom: 500px;
 }
 
 .sections-whit-margin {
