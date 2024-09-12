@@ -5,7 +5,7 @@
             <font-awesome-icon icon="chevron-down" :class="{ open: isDropdownOpen }" />
         </button>
         <div v-if="isDropdownOpen" class="dropdown-content">
-            <RouterLink href="#option1" v-for="(option, index) in options" :key="index" :to="option.rute"> {{
+            <RouterLink v-for="(option, index) in options" :key="index" :to="option.rute"> {{
                 option.title }}</RouterLink>
         </div>
     </div>

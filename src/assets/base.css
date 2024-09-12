@@ -166,3 +166,7 @@ html body {
   flex-direction: column;
   row-gap: 50px;
 }
+
+.sections-whit-margin {
+  margin: 0 5%
+}

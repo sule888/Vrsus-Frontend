@@ -46,6 +46,7 @@ const ubications = [
 .background {
     width: auto;
     background-color: var(--secondary-backgound-color);
+    padding: 50px 0;
 }
 
 .cont-ubi {

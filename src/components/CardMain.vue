@@ -37,7 +37,33 @@ import { useRouter } from 'vue-router';
 const props = defineProps({
     configurationCards: {
         type: Array,
-        default: () => ([])
+        default: () => []
+        // {
+        //         cardType: 'vr-aplications',
+        //         title: "Aplicacion 1 ",
+        //         multimedy: [
+        //             {
+        //                 src: "src/assets/img/test/opcion-juego1.jpg",
+        //                 alt: "hola"
+        //             }
+        //         ],
+        //         text: "  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis ut iure et voluptas doloribus ad dolorem illum blanditiis accusamus autem? Lorem ipsum dolor, sit amet consectetur adipisicing eliitiis accusamus autem?",
+        //         actionButtons: [
+        //             {
+        //                 buttonTitle: "Ver mas detalles",
+        //                 // aqui va la ruta a la vista 
+        //                 action: "",
+        //                 buttonType: 'primary-color'
+        //             },
+        //             {
+        //                 buttonTitle: "Contactanos",
+        //                 action: '',
+        //                 buttonType: 'secondary-color'
+        //             }
+        //         ],
+        //         icons: []
+
+        //     }
     },
     cardAction: {
         type: Function,
