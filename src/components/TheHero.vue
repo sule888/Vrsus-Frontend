@@ -27,7 +27,7 @@ import CircleButton from "./CircleButton.vue";
 const productos = [
     { title: "Quiero apartar un juego", rute: "/producto1" },
     { title: "Quiero apartar mas de un juego", rute: "/producto2" },
-    { title: "Quiero ver el catalogo de juegos", rute: "/producto3" }
+    { title: "Quiero ver el catalogo de juegos", rute: "/gamesCatalog" }
 ]
 
 </script>

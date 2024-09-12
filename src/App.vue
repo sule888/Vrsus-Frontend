@@ -1,13 +1,6 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
-import { ref } from "vue";
 import TheNavbar from "@/components/TheNavbar.vue"
-import TheHero from "@/components/TheHero.vue"
-import TheAboutUs from "./components/TheAboutUs.vue";
-import TheVrsusProyects from "@/components/TheVrsusProyects.vue"
-import TheVrAplications from "@/components/TheVrAplications.vue";
-import TheUbications from "@/components/TheUbications.vue"
-import TheReviews from "@/components/TheReviews.vue"
 import TheFooter from '@/components/TheFooter.vue'
 // import ModalMain from "@/components/ModalMain.vue"
 // import CircleButton from "./components/CircleButton.vue";
@@ -159,19 +152,10 @@ import TheFooter from '@/components/TheFooter.vue'
     </div>
     <div class="sections-whit-margin">
       <TheNavbar />
-      <TheHero />
-      <TheAboutUs />
     </div>
-    <TheVrsusProyects />
-    <div class="sections-whit-margin">
-      <TheVrAplications />
-    </div>
-    <TheUbications />
-    <div class="sections-whit-margin">
-      <TheReviews />
-    </div>
-    <TheFooter />
     <RouterView />
+    <TheFooter />
+
 
   </body>
 
@@ -180,9 +164,5 @@ import TheFooter from '@/components/TheFooter.vue'
 body {
   display: flex;
   flex-direction: column;
-}
-
-.sections-whit-margin {
-  margin: 0 5%
 }
 </style>
