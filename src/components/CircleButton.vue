@@ -53,13 +53,13 @@ const props = defineProps({
 button {
   display: flex;
   justify-content: space-between;
-  /* gap: 20px; */
   position: relative;
   overflow: hidden;
   box-shadow: 0 0 0 0 transparent;
   -webkit-transition: all 0.2s ease-in;
   -moz-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
+  width: 100%;
 }
 
 button:hover {

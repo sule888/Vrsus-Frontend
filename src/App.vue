@@ -1,10 +1,11 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
-import { ref } from "vue";
-import Hero from "@/components/Hero.vue"
-import NormalButton from "./components/NormalButton.vue";
+import TheNavbar from "@/components/TheNavbar.vue"
+import TheFooter from '@/components/TheFooter.vue'
 // import ModalMain from "@/components/ModalMain.vue"
 // import CircleButton from "./components/CircleButton.vue";
+
+
 // Ejemplo de pase de props para el componente de cards: 
 // const gameCard = {
 //   cardType: 'vr-aplications',
@@ -146,22 +147,22 @@ import NormalButton from "./components/NormalButton.vue";
 
 <template>
 
-  <header>
-
+  <body>
     <div class="wrapper">
-      <div style="margin-top: 200px;"></div>
-      <div style="margin-left: 200px">
-        <!-- <CircleButton @click="openModal">Open Modal</CircleButton>
-        <ModalMain :isOpen="isModalOpen" :multimedia="multimedia" :titulo="titulo" :texto="texto" @close="closeModal" /> -->
-      </div>
-
-      <Hero></Hero>
     </div>
-    <div style="margin-top: 200px;"></div>
-  </header>
+    <div class="sections-whit-margin">
+      <TheNavbar />
+    </div>
+    <RouterView />
+    <TheFooter />
 
-  <RouterView />
 
+  </body>
 
 </template>
-<style scoped></style>
+<style scoped>
+body {
+  display: flex;
+  flex-direction: column;
+}
+</style>

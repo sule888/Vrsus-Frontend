@@ -1,9 +1,8 @@
 <template>
-    <div>
-        <button class="button-opacity button" :buttonAction="buttonAction">
-            <slot></slot>
-        </button>
-    </div>
+    <button class="button-opacity button" @click="buttonAction">
+        <slot></slot>
+    </button>
+
 </template>
 
 <script setup>
