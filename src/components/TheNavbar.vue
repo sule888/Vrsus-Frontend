@@ -1,7 +1,9 @@
 <template>
     <div class="cont-nav margin-between-components">
         <div class="logo-part">
-            <img src="@/assets/img/logos/LOGO_FINAL_VRSUS5_para_NEON.png" alt="Vrsus logo">
+            <RouterLink to="/">
+                <img src="@/assets/img/logos/LOGO_FINAL_VRSUS5_para_NEON.png" alt="Vrsus logo">
+            </RouterLink>
         </div>
         <div class="items-nav-part" v-for="(item, index) in navigationItems" :key="index">
             <RouterLink :to="item.route">{{ item.title }}</RouterLink>
@@ -29,10 +31,11 @@ const toggleMenu = () => {
 };
 
 const navigationItems = [
-    { route: '/home', title: 'Home' },
-    { route: '/about', title: 'About' },
-    { route: '/services', title: 'Services' },
-    { route: '/contact', title: 'Contact' }
+    { route: '/', title: 'Home' },
+    { route: '/about', title: 'Acerca de ' },
+    { route: '/services', title: 'Servicios' },
+    { route: '/contact', title: 'Contact' },
+    { route: '/gamesCatalog', title: 'Catalogo de juegos' }
 ];
 
 const burgerSpans = Array(3).fill(null);
@@ -74,7 +77,7 @@ const burgerSpans = Array(3).fill(null);
 }
 
 .items-nav-part a:hover {
-    transform: translateY(-20px);
+    transform: translateY(-5 px);
     cursor: pointer;
     font-size: 22px;
 }
@@ -83,7 +86,7 @@ const burgerSpans = Array(3).fill(null);
     position: absolute;
     right: 0;
     top: 0;
-    z-index: -1;
+    z-index: -2;
     width: 20%;
     height: auto;
 }

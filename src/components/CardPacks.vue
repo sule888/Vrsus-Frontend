@@ -1,35 +1,43 @@
 <template>
     <div class="card" :class="cardSettings.cardType">
-        <div style="">
+        <div>
             <div class="title-part subtitles">
                 Paquete Vrsus {{ cardSettings.title }}
             </div>
+
             <div class="description-part">
-                <span>Duracion: {{ cardSettings.description.duracion }} {{ cardSettings.description.unidadesDeTiempo
-                    }}</span>
-                <span>Capacidad: Hasta {{ cardSettings.description.capacidad }} personas</span>
-                <div class="note-part" v-if="cardSettings.nota != ''">
+                <span v-if="cardSettings.description && cardSettings.description.duracion">
+                    Duración: {{ cardSettings.description.duracion }} {{ cardSettings.description.unidadesDeTiempo }}
+                </span>
+                <span v-if="cardSettings.description && cardSettings.description.capacidad">
+                    Capacidad: Hasta {{ cardSettings.description.capacidad }} personas
+                </span>
+
+                <div class="note-part" v-if="cardSettings.nota">
                     {{ cardSettings.nota }}
                 </div>
+
+
                 <div class="descripcion-icon">
                     <div>
-                        <ul v-for="(contenido, index) in cardSettings.description.contenido" :key="index">
-                            <li> {{ contenido }}</li>
+                        <ul v-if="cardSettings.description && cardSettings.description.contenido.length > 0">
+                            <li v-for="(contenido, index) in cardSettings.description.contenido" :key="index">
+                                {{ contenido }}
+                            </li>
                         </ul>
                     </div>
 
-                    <img v-if="cardSettings.icons.length > 1" :src="cardSettings.icons[1].src"
+                    <img v-if="cardSettings.icons && cardSettings.icons.length > 1" :src="cardSettings.icons[1].src"
                         :alt="cardSettings.icons[1].alt">
                 </div>
-
             </div>
         </div>
-        <div class="price-icon">
+
+
+        <div class="price-icon" v-if="cardSettings.icons && cardSettings.icons.length > 0">
             <img :src="cardSettings.icons[0].src" :alt="cardSettings.icons[0].alt">
-            <p> ${{ cardSettings.price }}</p>
-
+            <p v-if="cardSettings.price"> ${{ cardSettings.price }}</p>
         </div>
-
     </div>
 </template>
 
@@ -38,18 +46,17 @@ const props = defineProps({
     cardSettings: {
         type: Object,
         default: () => ({
-            cardType: 'primary-color',
-            title: 'select',
+            cardType: '',
+            title: '',
             icons: [],
             description: {
                 duracion: null,
-                unidadesDeTiempo: 'horas',
+                unidadesDeTiempo: '',
                 capacidad: null,
-                contenido: '',
-
+                contenido: [],
             },
             nota: '',
-            price: null
+            price: null,
         })
     }
 })
@@ -83,6 +90,11 @@ ul li {
 }
 
 img {
+    max-width: 150px;
+    height: 150px;
+}
+
+.price-icon img {
     max-width: auto;
     height: auto;
 }

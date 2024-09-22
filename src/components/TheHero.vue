@@ -8,7 +8,7 @@
         <img src="@/assets/img/img-statics/torre-con-gema-escarlata.png" alt="torre" />
         <div class="blur-div"></div>
         <div class="buttons-part">
-            <CircleButton buttonColor="primary-color" class="button">Nuestros Servicios</CircleButton>
+            <CircleButton buttonColor="primary-color" class="button width">Nuestros Servicios</CircleButton>
             <DropdownButton :options="productos" class="button drop">
                 <p>Nuestros Productos</p>
             </DropdownButton>
@@ -27,12 +27,16 @@ import CircleButton from "./CircleButton.vue";
 const productos = [
     { title: "Quiero apartar un juego", rute: "/producto1" },
     { title: "Quiero apartar mas de un juego", rute: "/producto2" },
-    { title: "Quiero ver el catalogo de juegos", rute: "/producto3" }
+    { title: "Quiero ver el catalogo de juegos", rute: "/gamesCatalog" }
 ]
 
 </script>
 
 <style scoped>
+.width {
+    width: auto;
+}
+
 .cont-hero {
     display: flex;
     flex-direction: column;

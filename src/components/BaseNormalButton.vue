@@ -18,6 +18,8 @@ const props = defineProps({
   font-size: var(--normal-buttons-text);
   border-radius: var(--border-radius-normal-button);
   padding: var(--padding-normal-buttons);
+  width: 150px;
+  /* AGREGAR EL ANCHO COMO VARIABLE  */
 }
 
 .primary-color {

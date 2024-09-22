@@ -142,6 +142,14 @@ html body {
   font-size: var(--subtitles-extra);
 }
 
+.coments {
+  font-size: var(--coment-text);
+}
+
+.normal-text {
+  --normal-text: 16px;
+}
+
 @media (max-width: 600px) {
   .title {
     font-size: var(--mobile-titles);
@@ -150,4 +158,15 @@ html body {
   .subtitles {
     font-size: var(--mobile-subtitles);
   }
+}
+
+.main-cont-special-backgrounds {
+  margin: 50px 5%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+}
+
+.sections-whit-margin {
+  margin: 0 5%
 }

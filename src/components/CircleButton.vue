@@ -59,6 +59,7 @@ button {
   -webkit-transition: all 0.2s ease-in;
   -moz-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
+  width: 100%;
 }
 
 button:hover {

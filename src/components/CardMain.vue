@@ -1,8 +1,7 @@
 <template>
     <div
         :class="configurationCards.some(card => card.cardType === 'vr-aplications') ? 'vr-aplications-container' : 'card-container'">
-        <div v-for="(card, index) in configurationCards" :key="index"
-            :class="['cont-card-wrapper', card.cardType + '-wrapper']">
+        <div v-for="(card, index) in configurationCards" :key="index">
             <div class="cont-card" :class="card.cardType">
                 <div v-if="card.title" class="title-part subtitles">
                     {{ card.title }}
@@ -16,7 +15,7 @@
                 </div>
                 <div class="action-buttons-part" v-if="card.actionButtons.length > 0">
                     <CircleButton v-for="(button, index) in card.actionButtons" :key="index"
-                        :buttonColor="button.buttonType" @click="() => handleButtonClick(button.action, card)">
+                        :buttonColor="button.buttonType" @click="actionButton(button.action, card)">
                         {{ button.buttonTitle }}
                     </CircleButton>
                 </div>
@@ -38,7 +37,33 @@ import { useRouter } from 'vue-router';
 const props = defineProps({
     configurationCards: {
         type: Array,
-        default: () => ([])
+        default: () => []
+        // {
+        //         cardType: 'vr-aplications',
+        //         title: "Aplicacion 1 ",
+        //         multimedy: [
+        //             {
+        //                 src: "src/assets/img/test/opcion-juego1.jpg",
+        //                 alt: "hola"
+        //             }
+        //         ],
+        //         text: "  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis ut iure et voluptas doloribus ad dolorem illum blanditiis accusamus autem? Lorem ipsum dolor, sit amet consectetur adipisicing eliitiis accusamus autem?",
+        //         actionButtons: [
+        //             {
+        //                 buttonTitle: "Ver mas detalles",
+        //                 // aqui va la ruta a la vista 
+        //                 action: "",
+        //                 buttonType: 'primary-color'
+        //             },
+        //             {
+        //                 buttonTitle: "Contactanos",
+        //                 action: '',
+        //                 buttonType: 'secondary-color'
+        //             }
+        //         ],
+        //         icons: []
+
+        //     }
     },
     cardAction: {
         type: Function,
@@ -50,7 +75,7 @@ const emit = defineEmits(['open-modal']);
 
 const router = useRouter();
 
-const handleButtonClick = (action, card) => {
+const actionButton = (action, card) => {
     props.cardAction(action, card);
     if (action === 'details') {
         props.cardAction(card);
