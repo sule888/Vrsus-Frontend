@@ -31,7 +31,7 @@ const toggleMenu = () => {
 };
 
 const navigationItems = [
-    { route: '/home', title: 'Home' },
+    { route: '/', title: 'Home' },
     { route: '/about', title: 'Acerca de ' },
     { route: '/services', title: 'Servicios' },
     { route: '/contact', title: 'Contact' },
@@ -77,7 +77,7 @@ const burgerSpans = Array(3).fill(null);
 }
 
 .items-nav-part a:hover {
-    transform: translateY(-20px);
+    transform: translateY(-5 px);
     cursor: pointer;
     font-size: 22px;
 }

@@ -1,7 +1,6 @@
 <template>
     <div>
         <div class="sections-whit-margin">
-            <TheNavbar />
             <TheHero />
             <TheAboutUs />
         </div>

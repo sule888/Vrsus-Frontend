@@ -11,7 +11,8 @@ import BaseNormalButton from './components/BaseNormalButton.vue'
 import BaseCircularButton from '@/components/BaseCircularButton.vue'
 import { FontAwesomeIcon } from '@/fontAwesome.js'
 import 'swiper/swiper-bundle.css';
-
+import VCalendar from 'v-calendar';
+import 'v-calendar/style.css';
 export { FontAwesomeIcon }
 
 const app = createApp(App)
@@ -28,5 +29,6 @@ const components = [
     app.component(name, component)
   })
 app.use(router)
+app.use(VCalendar, {})
 
 app.mount('#app')

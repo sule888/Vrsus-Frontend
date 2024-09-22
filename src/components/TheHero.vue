@@ -8,7 +8,7 @@
         <img src="@/assets/img/img-statics/torre-con-gema-escarlata.png" alt="torre" />
         <div class="blur-div"></div>
         <div class="buttons-part">
-            <CircleButton buttonColor="primary-color" class="button">Nuestros Servicios</CircleButton>
+            <CircleButton buttonColor="primary-color" class="button width">Nuestros Servicios</CircleButton>
             <DropdownButton :options="productos" class="button drop">
                 <p>Nuestros Productos</p>
             </DropdownButton>
@@ -33,6 +33,10 @@ const productos = [
 </script>
 
 <style scoped>
+.width {
+    width: auto;
+}
+
 .cont-hero {
     display: flex;
     flex-direction: column;

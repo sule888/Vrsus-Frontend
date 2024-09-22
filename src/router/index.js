@@ -22,7 +22,13 @@ const router = createRouter({
       name: "gamesCatalog",
       component: () => import("../views/GamesCatalogView.vue"),
     },
+    {
+      path: "/services",
+      name: "services",
+      component: () => import("../views/Services.vue"),
+    },
   ],
+
 });
 
 export default router;
